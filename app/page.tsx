@@ -262,7 +262,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 text-center">
+          <div className="grid md:grid-cols-3 gap-10 text-center mb-14">
             <div>
               <p className="text-xs uppercase tracking-widest text-stone-500 mb-3">Adresse</p>
               <p className="text-lg text-stone-900">Markedsgata 13</p>
@@ -273,7 +273,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="text-xs uppercase tracking-widest text-stone-600 hover:text-stone-900 transition-colors mt-2 inline-block underline underline-offset-4"
               >
-                Vis i kart →
+                Åpne i Google Maps →
               </a>
             </div>
             <div>
@@ -293,6 +293,20 @@ export default function Home() {
               </a>
               <p className="text-sm text-stone-600 mt-2">Ring eller send oss melding.</p>
             </div>
+          </div>
+
+          {/* Interactive map */}
+          <div className="overflow-hidden rounded-lg border border-stone-300/60 shadow-sm">
+            <iframe
+              title="Birgits Salong — Markedsgata 13, Stokmarknes"
+              src="https://maps.google.com/maps?q=Markedsgata%2013%2C%208450%20Stokmarknes&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+              width="100%"
+              height="420"
+              style={{ border: 0, display: "block" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
