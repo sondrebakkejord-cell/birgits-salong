@@ -69,6 +69,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Galleri */}
+      <section className="pb-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {[
+              {
+                src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80",
+                alt: "Klipp og styling hos Birgits Salong i Stokmarknes",
+              },
+              {
+                src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
+                alt: "Negler og gellakk hos Birgits Salong",
+              },
+              {
+                src: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=80",
+                alt: "Salong-interiør i Markedsgata på Stokmarknes",
+              },
+              {
+                src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=80",
+                alt: "Farge og behandling hos Birgits Salong",
+              },
+            ].map((img, i) => (
+              <div key={i} className="aspect-[3/4] overflow-hidden bg-stone-200">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Tjenester */}
       <section id="tjenester" className="py-24 px-6" style={{ backgroundColor: "#f1ebe1" }}>
         <div className="max-w-5xl mx-auto">
@@ -168,7 +203,8 @@ export default function Home() {
           <div className="space-y-5 text-lg text-stone-300 leading-relaxed">
             <p>
               Birgit har drevet salongen siden 1995, og Sara har vært med på laget en god
-              stund. Sammen tar de hånd om kundene som har fulgt salongen i generasjoner.
+              stund. Sammen tar de hånd om kundene som kommer tilbake år etter år —
+              trofaste gjennom tre tiår i Stokmarknes.
             </p>
             <p>
               Vi vet at folk vil ha mer enn bare en klipp — de vil ha en time som funker for
