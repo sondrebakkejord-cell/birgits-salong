@@ -106,90 +106,103 @@ export default function Home() {
 
       {/* Tjenester */}
       <section id="tjenester" className="py-24 px-6" style={{ backgroundColor: "#f1ebe1" }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.4em] text-stone-500 mb-4">— Tjenester —</p>
             <h2 className="font-display font-light" style={{ fontSize: "clamp(2.25rem, 4vw, 3.5rem)", letterSpacing: "-0.015em" }}>
               Tjenester &amp; priser
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-x-20 gap-y-12">
-            <div>
-              <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Klipp</h3>
-              <div className="space-y-4">
-                {[
-                  ["Dameklipp", "650"],
-                  ["Herreklipp", "450"],
-                  ["Barneklipp (under 12)", "350"],
-                  ["Studentklipp", "490"],
-                  ["Pensjonist", "490"],
-                ].map(([item, p]) => (
-                  <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
-                    <span className="text-stone-800">{item}</span>
-                    <span className="text-stone-900 font-medium">{p} kr</span>
-                  </div>
-                ))}
+          <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
+            {/* Feature-bilde */}
+            <div className="md:col-span-5">
+              <div className="aspect-[4/5] overflow-hidden bg-stone-200">
+                <img
+                  src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1100&q=85"
+                  alt="Farge og foliering hos Birgits Salong i Stokmarknes"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
               </div>
+              <p className="text-sm text-stone-600 italic mt-4">
+                Vi tar tiden det tar — og gir deg alltid en pris-prat før vi starter.
+              </p>
             </div>
 
-            <div>
-              <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Farge</h3>
-              <div className="space-y-4">
-                {[
-                  ["Fullfarge", "fra 1 290"],
-                  ["Striper / balayage", "fra 1 690"],
-                  ["Lugger", "fra 890"],
-                  ["Toning", "490"],
-                  ["MyDentity (Guy Tang)", "fra 1 490"],
-                ].map(([item, p]) => (
-                  <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
-                    <span className="text-stone-800">{item}</span>
-                    <span className="text-stone-900 font-medium">{p} kr</span>
+            {/* Meny */}
+            <div className="md:col-span-7">
+              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-12">
+                <div>
+                  <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Klipp</h3>
+                  <div className="space-y-4">
+                    {[
+                      ["Dameklipp", "650"],
+                      ["Herreklipp", "450"],
+                      ["Barneklipp (under 12)", "350"],
+                    ].map(([item, p]) => (
+                      <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
+                        <span className="text-stone-800">{item}</span>
+                        <span className="text-stone-900 font-medium">{p} kr</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
 
-            <div>
-              <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Negler</h3>
-              <div className="space-y-4">
-                {[
-                  ["Gellakk", "490"],
-                  ["Fyll", "590"],
-                  ["Nye negler", "790"],
-                  ["Fjerning", "190"],
-                ].map(([item, p]) => (
-                  <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
-                    <span className="text-stone-800">{item}</span>
-                    <span className="text-stone-900 font-medium">{p} kr</span>
+                <div>
+                  <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Farge</h3>
+                  <div className="space-y-4">
+                    {[
+                      ["Fullfarge", "fra 1 290"],
+                      ["Striper / balayage", "fra 1 690"],
+                      ["Toning", "490"],
+                    ].map(([item, p]) => (
+                      <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
+                        <span className="text-stone-800">{item}</span>
+                        <span className="text-stone-900 font-medium">{p} kr</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
 
-            <div>
-              <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Solarium</h3>
-              <div className="space-y-4">
-                {[
-                  ["10 minutter", "60"],
-                  ["20 minutter", "110"],
-                  ["30 minutter", "150"],
-                  ["Klippekort 5x20 min", "490"],
-                ].map(([item, p]) => (
-                  <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
-                    <span className="text-stone-800">{item}</span>
-                    <span className="text-stone-900 font-medium">{p} kr</span>
+                <div>
+                  <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Negler</h3>
+                  <div className="space-y-4">
+                    {[
+                      ["Gellakk", "490"],
+                      ["Nye negler", "790"],
+                    ].map(([item, p]) => (
+                      <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
+                        <span className="text-stone-800">{item}</span>
+                        <span className="text-stone-900 font-medium">{p} kr</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <div>
+                  <h3 className="font-medium mb-6 uppercase tracking-widest text-sm text-stone-800">Solarium</h3>
+                  <div className="space-y-4">
+                    {[
+                      ["20 minutter", "110"],
+                      ["30 minutter", "150"],
+                      ["Klippekort 5x20 min", "490"],
+                    ].map(([item, p]) => (
+                      <div key={item} className="flex items-baseline justify-between border-b border-stone-400/30 pb-3">
+                        <span className="text-stone-800">{item}</span>
+                        <span className="text-stone-900 font-medium">{p} kr</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
+
+              <p className="mt-12 text-sm text-stone-600 italic">
+                Prisene er veiledende. Spør oss gjerne om det du lurer på — vi har mer enn
+                det som står her.
+              </p>
             </div>
           </div>
-
-          <p className="text-center mt-16 text-sm text-stone-600 italic max-w-xl mx-auto">
-            Prisene er veiledende. Vi gir deg alltid en pris-prat før vi starter, slik at du
-            vet hva du betaler for.
-          </p>
         </div>
       </section>
 
